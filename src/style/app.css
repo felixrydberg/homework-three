@@ -8,3 +8,33 @@ body {
 input[type="file"] {
   display: none;
 }
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container form {
+  margin: 10vh;
+  display: flex;
+  flex-direction: column;
+  background: #222;
+  padding: 16px;
+  border: #444 solid 1px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.form-container form input, 
+.form-container form button {
+  margin: 16px;
+  background: #333;
+  padding: 16px;
+  border: #444 solid 1px;
+  border-radius: 8px;
+  color: white;
+}
+
+.form-container form input:focus {
+  outline: #555 solid 1px;
+}

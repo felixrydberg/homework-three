@@ -21,8 +21,7 @@ const SignIn = (props) => {
       if(user.pwd === pwd) {
         setAuth(true);
         setUser(user)
-        setContent({display: true, message: 'Login successfull', callBack: pushToHome});
-
+        navigation('/')
       }else {
         setContent({display: true, message: 'Password incorrent'})
       }
@@ -31,8 +30,6 @@ const SignIn = (props) => {
     }
   }
 
-  const pushToHome = () => {navigation('/')};
-
   const emailOnchange = (event) => setEmail(event.target.value);
 
   const pwdOnchange = (event) =>  setPwd(event.target.value);
@@ -40,7 +37,7 @@ const SignIn = (props) => {
   const closeModal = () => setContent({display: false})
 
   return (
-    <div>
+    <div className="sign-in-container form-container">
       <form onSubmit={login}>
         <input onChange={emailOnchange} type="email" placeholder="Email"></input>
         <input onChange={pwdOnchange} type="password" placeholder="Password"></input>

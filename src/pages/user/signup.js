@@ -36,7 +36,7 @@ export default class SignUp extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="sign-up-container form-container">
         <form onSubmit={this.isUserValid}>
           <input
             onChange={this.emailOnchange}

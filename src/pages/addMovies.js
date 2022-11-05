@@ -29,7 +29,11 @@ const AddMovies = () => {
         arr.push(data);
         localStorage.setItem('movies', JSON.stringify(arr));
         return [...prevState, ...[data]];
-    })
+    });
+    setName('');
+    setDesc('');
+    setSubTitle('');
+    setImg('');
   }
 
   const fileToBase64 = (event) => {
@@ -44,12 +48,12 @@ const AddMovies = () => {
   }
 
   return (
-    <div>
+    <div className="form-container">
       <form onSubmit={submit}>
-        <input onChange={(event) => {setName(event.target.value)}} type="text" placeholder="Name"></input>
-        <input onChange={(event) => {setSubTitle(event.target.value)}} type="text" placeholder="Subtitle"></input>
-        <input onChange={(event) => {setDesc(event.target.value)}} type="text" placeholder="Description"></input>
-        <label className="nav-link">Upload Image<input onChange={fileToBase64} type="file" placeholder="Description"></input></label>
+        <input required onChange={(event) => {setName(event.target.value)}} type="text" placeholder="Name"></input>
+        <input required onChange={(event) => {setSubTitle(event.target.value)}} type="text" placeholder="Subtitle"></input>
+        <input required onChange={(event) => {setDesc(event.target.value)}} type="text" placeholder="Description"></input>
+        <label className="nav-link">Upload Image<input required onChange={fileToBase64} type="file" placeholder="Description"></input></label>
         <button type="submit">Add Movie</button>
       </form>
     </div>

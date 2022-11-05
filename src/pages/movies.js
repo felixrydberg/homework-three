@@ -8,7 +8,7 @@ const Movies = () => {
       return (
         <li key={index} className="img-display remove-btn-container">
           <button className="remove-btn" onClick={() => {removeIndex(index)}}>X</button>
-          <img src={movie.img}></img>
+          <img src={movie.img} alt="review poster"></img>
           <h1>{movie.name}</h1>
           <div>
             <h3>{movie.subTitle}</h3>
@@ -23,7 +23,7 @@ const Movies = () => {
 
     return (
       <li key={index} className="img-display">
-        <img src={movie.img}></img>
+        <img src={movie.img} alt="review poster"></img>
         <h1>{movie.name}</h1>
         <div>
           <h3>{movie.subTitle}</h3>
@@ -46,6 +46,7 @@ const Movies = () => {
 
   return (
     <div className="movies">
+      <h1>Movies</h1>
       <ul>{movieList}</ul>
     </div>
   );

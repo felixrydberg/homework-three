@@ -6,7 +6,7 @@ const MovieDisplay = () => {
   return (
     <div className="movie-display">
       <div className="img-display">
-        <img src={movie.img}></img>
+        <img src={movie.img} alt="review poster"></img>
         <h1>{movie.name}</h1>
         <div>
           <h3>{movie.subTitle}</h3>

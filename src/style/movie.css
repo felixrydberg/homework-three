@@ -48,3 +48,8 @@
 .img-display a:hover {
     background-color: #555;
 }
+
+.movies h1 {
+    color: white;
+    margin: 1rem;
+}
